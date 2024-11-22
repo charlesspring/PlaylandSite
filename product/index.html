@@ -1,0 +1,200 @@
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="generator" content="Primo" />
+      <!-- HEAD_svelte-bwdlo4_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="UTF-8"><link rel="preconnect" href="https://fonts.bunny.net"><link href="https://fonts.bunny.net/css?family=fredoka:300,400,500,600,700|space-grotesk:300,400,500,600,700" rel="stylesheet"><link href="https://fonts.bunny.net/css?family=fredoka:300,400,500,600,700|open-sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i|space-grotesk:300,400,500,600,700" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/primoaf/image/upload/v1659676914/favicon_roaxv0.png"><script async src="https://www.googletagmanager.com/gtag/js?id=G-ZXHNFDNLFQ"></script><script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZXHNFDNLFQ');
+</script><style>/* Reset & standardize default styles */
+@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
+
+/* Design tokens (apply to components) */
+:root {
+  --color-tint: #f8fbff;
+
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+
+  /* Colors */
+  --color-base: #183b56;
+  --color-brand: #1565d8;
+  --color-accent: #36b37e;
+  --color-accent-2: #0d2436;
+  --color-light: #fcfcfd;
+  --color-shade: #cbcace;
+  --color-inverted: white;
+  --color-tint: #e5eaf4;
+
+  /* Base values */
+  --color: var(--color-base);
+  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  --border-radius: 8px;
+  --border-color: #eee;
+  --background: white;
+}
+
+/* Root element (use instead of `body`) */
+#page {
+  font-family: var(--font-body);
+  color: var(--color-base);
+  line-height: 1.2;
+  font-size: 1.125rem;
+  background: var(--background);
+}
+
+.section.has-content {
+  display: flex;
+  justify-content: center;
+  padding: 5rem 2rem;
+}
+
+.section.has-content .content {
+    max-width: 800px;
+    width: 100%;
+  }
+
+.section-container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.heading-group {
+  display: grid;
+  gap: 1rem;
+  place-content: center;
+  text-align: center;
+}
+
+.heading-group .superhead {
+    font-family: var(--font-body);
+    color: var(--color-accent);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+.heading-group .subheading {
+    color: #4f6373;
+    line-height: 1.4;
+    max-width: 600px;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  line-height: 1.1;
+  font-weight: 500;
+  max-width: 600px;
+}
+
+.button {
+  color: var(--color-brand, white);
+  background: var(--color-inverted);
+  border: 2px solid var(--color-brand);
+  border-radius: 6px;
+  padding: 8px 20px;
+  transition: 0.1s background, 0.1s color;
+}
+
+.button:hover {
+    color: var(--color-inverted);
+    background: var(--color-brand);
+    border-color: var(--color-inverted);
+  }
+
+.button.inverted {
+    background: var(--color-white);
+    color: var(--color-brand);
+    border-color: #0d2436;
+  }
+
+.link {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--color-brand);
+}
+
+.link .arrow {
+    transition: transform 0.1s;
+  }
+
+.link:hover .arrow {
+    transform: translateX(4px);
+  }
+</style><!-- HEAD_svelte-bwdlo4_END -->
+      <style>@import url("https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css");header.svelte-6vjs4t.svelte-6vjs4t.svelte-6vjs4t{border-bottom:1px solid var(--border-color)}.section-container.svelte-6vjs4t.svelte-6vjs4t.svelte-6vjs4t{display:flex;justify-content:space-between;align-items:center;padding-top:0.75rem;padding-bottom:0.75rem}.desktop-nav.svelte-6vjs4t.svelte-6vjs4t.svelte-6vjs4t{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;width:100%}.desktop-nav.svelte-6vjs4t .logo.svelte-6vjs4t.svelte-6vjs4t{font-size:1.5rem;font-weight:600;line-height:1.4;margin-right:1.5rem;width:var(--size)}.desktop-nav.svelte-6vjs4t nav.svelte-6vjs4t.svelte-6vjs4t{display:flex;align-items:center;gap:1.5rem}.desktop-nav.svelte-6vjs4t nav.svelte-6vjs4t a.svelte-6vjs4t{font-size:1rem;font-weight:400;display:none}.desktop-nav.svelte-6vjs4t nav a.nav-item.svelte-6vjs4t.svelte-6vjs4t{border-bottom:2px solid transparent;transition:border-color 0.1s}.desktop-nav.svelte-6vjs4t nav a.nav-item.svelte-6vjs4t.svelte-6vjs4t:hover{border-color:var(--color-brand)}.desktop-nav.svelte-6vjs4t button#open.svelte-6vjs4t.svelte-6vjs4t{font-size:1.5rem;margin-left:auto}nav#mobile-nav.svelte-6vjs4t.svelte-6vjs4t.svelte-6vjs4t{position:absolute;flex-direction:column;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow);border-radius:var(--border-radius);left:0.5rem;top:0.5rem;right:0.5rem;padding:2rem;z-index:2}nav#mobile-nav.svelte-6vjs4t a.svelte-6vjs4t.svelte-6vjs4t{display:block}nav#mobile-nav.svelte-6vjs4t hr.svelte-6vjs4t.svelte-6vjs4t{width:100%}nav#mobile-nav.svelte-6vjs4t .button.svelte-6vjs4t.svelte-6vjs4t{width:100%;justify-content:center}nav#mobile-nav.svelte-6vjs4t button#close.svelte-6vjs4t.svelte-6vjs4t{display:block;position:absolute;right:1rem;top:1rem;font-size:1.5rem}@media(min-width: 600px){#open.svelte-6vjs4t.svelte-6vjs4t.svelte-6vjs4t,#mobile-nav.svelte-6vjs4t.svelte-6vjs4t.svelte-6vjs4t{display:none}.desktop-nav.svelte-6vjs4t nav.svelte-6vjs4t a.svelte-6vjs4t{display:inline-block}}
+section.svelte-17t4z3x.svelte-17t4z3x{background:var(--color-background, black);color:var(--color-white,white)}.teasers.svelte-17t4z3x.svelte-17t4z3x{display:grid;gap:6rem}.teaser.svelte-17t4z3x.svelte-17t4z3x{display:grid;gap:1rem}.teaser.svelte-17t4z3x img.svelte-17t4z3x{width:100%;border-radius:var(--border-radius)}.teaser.svelte-17t4z3x .content-section.svelte-17t4z3x{display:grid;place-items:flex-start;padding:0}.teaser.svelte-17t4z3x .content-section .heading.svelte-17t4z3x{margin-bottom:1.25rem;margin-left:0;color:var(--color-white, white)}.teaser.svelte-17t4z3x .content-section .body.svelte-17t4z3x{margin-bottom:2rem}.teaser.svelte-17t4z3x .content-section a.button.svelte-17t4z3x{background-color:transparent;border:1.5px solid white}.teaser.svelte-17t4z3x .content-section a.button.svelte-17t4z3x:hover{box-shadow:0 0 0 2px white}@media(min-width: 800px){.teaser.svelte-17t4z3x.svelte-17t4z3x{grid-template-columns:1fr 1fr;place-items:center;gap:4rem
+
+    /* switch direction for even items */
+}.teaser.svelte-17t4z3x:nth-child(odd) img.svelte-17t4z3x{grid-row:1;grid-column:2}.teaser.svelte-17t4z3x:nth-child(even) img.svelte-17t4z3x{grid-row:1;grid-column:1}}@media(min-width: 1200px){section.svelte-17t4z3x.svelte-17t4z3x{gap:6rem}.teaser.svelte-17t4z3x.svelte-17t4z3x{gap:10rem}.heading.svelte-17t4z3x.svelte-17t4z3x{margin-bottom:5rem}.body.svelte-17t4z3x.svelte-17t4z3x{margin-bottom:2.5rem}}
+.items.svelte-dg30bs.svelte-dg30bs{display:grid;gap:6rem}@media(min-width: 800px){.items.svelte-dg30bs.svelte-dg30bs{grid-template-columns:1fr 1fr
+}}.item.svelte-dg30bs.svelte-dg30bs{display:grid;place-content:start}.item.svelte-dg30bs img.svelte-dg30bs{width:100%;margin-bottom:1.5rem;border-radius:var(--border-radius)}.item.svelte-dg30bs .body.svelte-dg30bs{display:grid;place-items:flex-start;line-height:1.5}.item.svelte-dg30bs .body .title.svelte-dg30bs{font-size:1.75rem;margin-bottom:.5rem}</style>
+    </head>
+    <body id="page">
+       
+<div class="section" id="section-71c0a656"><header class="svelte-6vjs4t"><div class="section-container svelte-6vjs4t"><div class="desktop-nav svelte-6vjs4t"><a href="/" class="logo svelte-6vjs4t" style="--size: 8rem;"><img src="https://beta.landintheair.com/" alt=""></a>
+      <nav class="svelte-6vjs4t"><a class="nav-item svelte-6vjs4t" href="/">Home</a><a class="nav-item svelte-6vjs4t" href="/product">Products</a><a class="nav-item svelte-6vjs4t" href="/about">About Us</a>
+        
+        <button id="open" aria-label="Open mobile navigation" class="svelte-6vjs4t"></button></nav></div>
+    </div></header></div> 
+<div class="section" id="section-7d4da795"><section class="svelte-17t4z3x"><div id="aboutus" class="section-container svelte-17t4z3x"><div class="teasers svelte-17t4z3x"><div class="teaser svelte-17t4z3x"><img src="https://mqjsmudzzrornijhduor.supabase.co/storage/v1/object/public/images/934d91f8-d567-457a-b0ab-b5058a4100f0/1695540105718newgameranking.png" alt="" class="svelte-17t4z3x">
+          <div class="content-section svelte-17t4z3x"><h2 class="heading svelte-17t4z3x">Life Bubble(能源大战)</h2>
+            <div class="body svelte-17t4z3x"><!-- HTML_TAG_START --><p>Ranks #1 on Douyin(tiktok) Mini Game new game list</p><!-- HTML_TAG_END --></div>
+            </div>
+        </div><div class="teaser svelte-17t4z3x"><img src="https://mqjsmudzzrornijhduor.supabase.co/storage/v1/object/public/images/934d91f8-d567-457a-b0ab-b5058a4100f0/1695481059891ballup.jpeg" alt="" class="svelte-17t4z3x">
+          <div class="content-section svelte-17t4z3x"><h2 class="heading svelte-17t4z3x">Ball Up: Knife Racing</h2>
+            <div class="body svelte-17t4z3x"><!-- HTML_TAG_START --><p>Ranks #1 on Douyin(tiktok) Mini Game hot list</p><!-- HTML_TAG_END --></div>
+            </div>
+        </div><div class="teaser svelte-17t4z3x"><img src="https://mqjsmudzzrornijhduor.supabase.co/storage/v1/object/public/images/934d91f8-d567-457a-b0ab-b5058a4100f0/1695480961259holeiowhitepaper.jpeg" alt="" class="svelte-17t4z3x">
+          <div class="content-section svelte-17t4z3x"><h2 class="heading svelte-17t4z3x">Hole.io</h2>
+            <div class="body svelte-17t4z3x"><!-- HTML_TAG_START --><p>Appears in the Official WhitePaper as a ShowCase.</p><!-- HTML_TAG_END --></div>
+            </div>
+        </div><div class="teaser svelte-17t4z3x"><img src="https://mqjsmudzzrornijhduor.supabase.co/storage/v1/object/public/images/934d91f8-d567-457a-b0ab-b5058a4100f0/1695481048292hole.iohotlist.jpeg" alt="" class="svelte-17t4z3x">
+          <div class="content-section svelte-17t4z3x"><h2 class="heading svelte-17t4z3x">Hole.io</h2>
+            <div class="body svelte-17t4z3x"><!-- HTML_TAG_START --><p>hot list. (to be finished)</p><!-- HTML_TAG_END --></div>
+            </div>
+        </div><div class="teaser svelte-17t4z3x"><img src="https://mqjsmudzzrornijhduor.supabase.co/storage/v1/object/public/images/934d91f8-d567-457a-b0ab-b5058a4100f0/1695538702346cn8ball.jpg" alt="" class="svelte-17t4z3x">
+          <div class="content-section svelte-17t4z3x"><h2 class="heading svelte-17t4z3x">Chinese Billiards</h2>
+            <div class="body svelte-17t4z3x"><!-- HTML_TAG_START --><p>Got license from the government as "中国台球“.  to be finished.</p><!-- HTML_TAG_END --></div>
+            </div>
+        </div><div class="teaser svelte-17t4z3x"><img src="https://mqjsmudzzrornijhduor.supabase.co/storage/v1/object/public/images/934d91f8-d567-457a-b0ab-b5058a4100f0/yiganchengming.png1695538403948" alt="" class="svelte-17t4z3x">
+          <div class="content-section svelte-17t4z3x"><h2 class="heading svelte-17t4z3x">8 Ball game ranks #1 on Appstore</h2>
+            <div class="body svelte-17t4z3x"><!-- HTML_TAG_START --><p>We have innovatively combined billiards and role-playing, providing players with a unique gaming experience.</p><!-- HTML_TAG_END --></div>
+            </div>
+        </div><div class="teaser svelte-17t4z3x"><img src="https://mqjsmudzzrornijhduor.supabase.co/storage/v1/object/public/images/934d91f8-d567-457a-b0ab-b5058a4100f0/1695481937385pixellogo.webp" alt="" class="svelte-17t4z3x">
+          <div class="content-section svelte-17t4z3x"><h2 class="heading svelte-17t4z3x">PixelQuest Ranks #1 on Taptap</h2>
+            <div class="body svelte-17t4z3x"><!-- HTML_TAG_START --><p>Pixel Quest is our first game, taking two years to finish it, which got ranked on #1 of taptap after it's release. it's successful on core gameplay, but failed on monetizing.</p><!-- HTML_TAG_END --></div>
+            <a class="button svelte-17t4z3x" href="http://www.chuapp.com/?c=Article&amp;a=index&amp;id=283443">Game News Updates
+              </a></div>
+        </div></div></div></section></div> 
+<div class="section" id="section-37f831b0"><section class="section-container svelte-dg30bs"><div class="items svelte-dg30bs"><div class="item svelte-dg30bs"><img src="https://mqjsmudzzrornijhduor.supabase.co/storage/v1/object/public/images/934d91f8-d567-457a-b0ab-b5058a4100f0/1695481182649pixel.png" alt="Ranking #1 on Taptap" class="svelte-dg30bs">
+        <div class="body svelte-dg30bs"><h2 class="title heading svelte-dg30bs">皮克斯战记(Pixel Quest)</h2>
+          <div class="description"><!-- HTML_TAG_START -->Taptap.com(aka taptap.io) is a famous game channel in China.<!-- HTML_TAG_END --></div></div>
+      </div><div class="item svelte-dg30bs"><img src="https://mqjsmudzzrornijhduor.supabase.co/storage/v1/object/public/images/934d91f8-d567-457a-b0ab-b5058a4100f0/1695481192450pixel2.png" alt="" class="svelte-dg30bs">
+        <div class="body svelte-dg30bs"><h2 class="title heading svelte-dg30bs">Player Review</h2>
+          <div class="description"><!-- HTML_TAG_START -->Players like the game so much<!-- HTML_TAG_END --></div></div>
+      </div></div></section></div> 
+
+      <script type="module">
+      import('/_symbols/c621e066-115c-4124-8aef-a730d87feffb.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-71c0a656'),
+              hydrate: true,
+              props: {"logo":{"size":"8","image":{"alt":"","src":"https://beta.landintheair.com/","url":"https://beta.landintheair.com/","size":null},"title":"Home"},"site_nav":[{"link":{"url":"/","label":"Home","active":false}},{"link":{"url":"/product","label":"Products","active":false}},{"link":{"url":"/about","label":"About Us","active":false}}],"cta":[]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    </script>
+    </body>
+  </html>
+  
