@@ -1,4 +1,4 @@
-// Site Footer 1 - Updated November 22, 2024
+// Site Footer 1 - Updated November 26, 2024
 function noop() { }
 function assign(tar, src) {
     // @ts-ignore
@@ -2969,7 +2969,7 @@ function create_fragment(ctx) {
 
 			t0 = space();
 			span = element("span");
-			t1 = text("© Copyright 2021 Playland All Rights Reserved.");
+			t1 = text("© Copyright 2021 Playland All Rights Reserved. support@minigamespace.com");
 			t2 = space();
 			div = element("div");
 
@@ -2993,7 +2993,7 @@ function create_fragment(ctx) {
 			t0 = claim_space(footer_nodes);
 			span = claim_element(footer_nodes, "SPAN", { class: true });
 			var span_nodes = children(span);
-			t1 = claim_text(span_nodes, "© Copyright 2021 Playland All Rights Reserved.");
+			t1 = claim_text(span_nodes, "© Copyright 2021 Playland All Rights Reserved. support@minigamespace.com");
 			span_nodes.forEach(detach);
 			t2 = claim_space(footer_nodes);
 			div = claim_element(footer_nodes, "DIV", { class: true });
